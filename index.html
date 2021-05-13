@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="texto" >
+    <button type="button" onclick="Count()">Count Words</button>
+</body>
+    <script>
+        function Count() {
+            var str = document.getElementById('texto').value; //pegar input
+            console.log(str) // printa o input (depois é para remover xd)
+            str.replace(/(^\s*)|(\s*$)/gi,""); 
+            str.replace(/[ ]{2,}/gi," ");
+            var wrd = str.split(' ').length;
+            console.log(wrd)
+            
+        }
+
+    </script>
+</html>
